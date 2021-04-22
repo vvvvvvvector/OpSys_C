@@ -20,15 +20,15 @@ int main(){
     }
     
     if(fork() == 0){
-        close(fd_1[0]);
-        close(fd_2[1]);
+        close(fd_1[0]); // close p1 read side
+        close(fd_2[1]); // sloe p2 write side
         printf("Child: Writing to pipe 1 – Message is %s\n", pipe1writemessage);
         write(fd_1[1], pipe1writemessage, sizeof(pipe1writemessage));
         read(fd_2[0], readmessage, sizeof(readmessage));
         printf("Child: Reading from pipe 2 – Message is %s\n", readmessage);
     } else {
-        close(fd_1[1]);
-        close(fd_2[0]);
+        close(fd_1[1]); // close p1 write side
+        close(fd_2[0]); // close p2 read side
         read(fd_1[0], readmessage, sizeof(readmessage));
         printf("Parent: Reading from pipe 1 – Message is %s\n", readmessage);
         printf("Parent: Writing to pipe 2 – Message is %s\n", pipe2writemessage);
