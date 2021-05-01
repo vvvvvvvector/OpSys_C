@@ -1,0 +1,6 @@
+total 36K
+drwxr-xr-x  2 wiktor wiktor 4.0K May  1 00:11 .
+drwxr-xr-x 18 wiktor wiktor 4.0K Apr 30 23:50 ..
+-rwxr-xr-x  1 wiktor wiktor  17K May  1 00:11 a.out
+-rw-r--r--  1 wiktor wiktor  641 May  1 00:11 main.c
+-rwxr-xr-x  1 wiktor wiktor  267 May  1 00:10 plik.txt
