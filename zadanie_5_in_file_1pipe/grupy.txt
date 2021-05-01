@@ -1,0 +1,5 @@
+root:x:0:root
+adm:x:999:daemon
+wheel:x:998:wiktor
+kmem:x:997:
+tty:x:5:
