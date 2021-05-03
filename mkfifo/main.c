@@ -26,8 +26,6 @@ int main(int argc, char *argv[]){
     } else {
         char buf[MAX];
         int lbajt;
-        //wait(NULL);
-        close(0);
         pdesk = open("kolejka", O_RDONLY);
         while((lbajt = read(pdesk, buf, MAX)) > 0){
             write(1, buf, lbajt);
